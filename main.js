@@ -9,6 +9,8 @@ function ingresosMensuales(){
     ingreso.push({ingresoMensual})
 }
 
+ingresosMensuales()
+
 
 function gastosMensuales(){
     let continuarAgregando = true;
@@ -21,6 +23,8 @@ function gastosMensuales(){
         continuarAgregando = confirm("Quieres Continuar agregando? ");
     }
 }
+
+gastosMensuales();
 
 function calcularTotalGastos(){
     let total = 0;
@@ -52,6 +56,8 @@ function saldoTotal(){
         console.log("debes intentar reducir un poco tus gastos")
     }
 }
+
+saldoTotal()
 
 
 
