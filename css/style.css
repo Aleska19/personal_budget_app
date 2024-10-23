@@ -5,7 +5,7 @@
   margin: 0;
 }
 
-body {
+.background_principal {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(../asset/background_inicio.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../asset/background_inicio.jpg);
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@ body {
   height: 100%;
 }
 
-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,7 +23,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
-header .logo {
+.header .logo {
   max-width: 450px;
   height: 40vh;
 }
@@ -68,12 +68,12 @@ header .logo {
   padding: 3rem;
 }
 .info_principal .box-shadow p {
+  text-align: center;
+  font-family: lato;
   font-size: 1.2rem;
+  font-weight: 700;
   padding: 1.5rem 3rem 3rem 3rem;
   color: white;
-  font-family: lato;
-  font-weight: 700;
-  text-align: center;
 }
 .info_principal .box-shadow h2 {
   font-family: roboto;
@@ -93,4 +93,42 @@ header .logo {
 }
 .info_principal .box-shadow a:hover {
   background-color: rgba(23, 163, 184, 0.2470588235);
+}
+
+.header_simulador {
+  background: black;
+  -webkit-box-shadow: 0 0 5px 0;
+          box-shadow: 0 0 5px 0;
+  border-bottom: solid 1px #bdc3c7;
+}
+
+.about-us {
+  padding: 3rem;
+}
+
+.flex_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.flex_info .img_principal {
+  max-width: 90vw;
+  height: 50vh;
+  border-radius: 10px;
+}
+.flex_info p {
+  width: 50%;
+  text-align: center;
+  font-family: lato;
+  font-size: 1.2rem;
+  font-weight: 700;
 }

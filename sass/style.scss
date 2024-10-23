@@ -6,7 +6,9 @@
 
 @import '../sass/utils/variables.scss';
 
-body{
+
+
+.background_principal{
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../asset/background_inicio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,6 +18,9 @@ body{
 }
 @import '../sass/pages/inicio.scss';
 @import '../sass/pages/simulador.scss';
+
+//mixins//
+@import '../sass/utils/mixins.scss';
 
 
 

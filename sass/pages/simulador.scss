@@ -1,0 +1,26 @@
+@import '../utils/mixins.scss';
+.header_simulador{
+    background: black;
+    box-shadow: 0 0 5px 0;
+    border-bottom: solid 1px #bdc3c7;
+}
+
+.about-us{
+    padding: 3rem;
+}
+
+.flex_info{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    .img_principal{
+        max-width: 90vw;
+        height: 50vh;
+        border-radius: 10px;
+    }
+    p{
+        width: 50%;
+        @include parrafos;
+    }
+}

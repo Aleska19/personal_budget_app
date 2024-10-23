@@ -40,7 +40,7 @@ function mostrarGastos(){
     console.log('Resumen de gastos:' )
     gastos.forEach(gasto => {
         console.log(`${gasto.descripcion}: ${gasto.monto} pesos`);
-        
+    
     });
 }
 
@@ -58,6 +58,7 @@ function saldoTotal(){
 }
 
 saldoTotal()
+
 
 
 
