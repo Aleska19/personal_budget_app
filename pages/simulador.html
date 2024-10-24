@@ -22,14 +22,14 @@
             <img class="img img_principal" src="../asset/imagen_principal_simulador.jpg"  alt="">
             <p>En <span>SmartBudget</span>, simplificamos el proceso de gestionar tus gastos personales. Nuestra herramienta te permite ingresar y organizar tus gastos de manera rápida y eficiente, sin la necesidad de registrarte o almacenar información. Todo se realiza de forma directa y segura</p>
         </div>
-        <a id="btn_empieza_ahora" href="#">Empieza ahora</a>
+        <a id="btn_empieza_ahora" href="">Empieza ahora</a>
     </section>
 
     <h1>Simulador de Gastos</h1>
 
     <section class="simulador">
         <div id="form" class="form form-1">
-            <form id="IngresosForm" action="">
+            <form id="ingresosForm" action="">
                 <h2>Agregar Ingresos Mensuales</h2>
 
                 <div id="item">
@@ -46,9 +46,10 @@
                     <label for="date" name="date">Fecha de Ingreso:</label>
                     <input type="date" id="date" name="date" required>
                 </div> 
+                <a id="agregar" href="#">Agregar</a>
+                <a id="agregarIngresos" href="#">Agregar otro Ingresos</a>
             </form>
-            <a id="agregarIngresos" href="#">Agregar otro Ingresos</a>
-            <h2>Total:</h2>
+            <h2>Total Ingresos: <span id="totalIngresos">0</span></h2>
         </div>
 
         <div class="form form-2">
@@ -84,6 +85,7 @@
 
     <script src="../main.js"></script>
     <script src="../js/btn.js"></script>
+    <script src="../js/ingresos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 

@@ -5,42 +5,43 @@ btnEmpiezaAhora.addEventListener("click", function(){
     window.location.href = "./pages/simulador.html";
 });
 
-//boton agregar mas
 
-let contadorIngresos = 1; //Contador para los ingresos 
-let contadorGastos = 1; //Contador Gastos 
+// //boton agregar mas
 
-//Agregar Ingresos
-document.getElementById('agregarIngresos').addEventListener("click", function(event){
-    event.preventDefault();
-    contadorIngresos ++;
+// let contadorIngresos = 1; //Contador para los ingresos 
+// let contadorGastos = 1; //Contador Gastos 
 
-    const nuevoIngreso = document.createElement("div");
-    nuevoIngreso.classList.add("item");
+// //Agregar Ingresos
+// document.getElementById('agregarIngresos').addEventListener("click", function(event){
+//     event.preventDefault();
+//     contadorIngresos ++;
 
-    //descripcion de ingreso
+//     const nuevoIngreso = document.createElement("div");
+//     nuevoIngreso.classList.add("item");
 
-    const nuevaDescripcion = document.createElement("input");
-    nuevaDescripcion.type = "text";
-    nuevaDescripcion.id = "source" + contadorIngresos;
-    nuevaDescripcion.placeholder = "Salario, freenlace. etc" + contadorIngresos;
+//     //descripcion de ingreso
 
-    //monto de ingreso
+//     const nuevaDescripcion = document.createElement("input");
+//     nuevaDescripcion.type = "text";
+//     nuevaDescripcion.id = "source" + contadorIngresos;
+//     nuevaDescripcion.placeholder = "Salario, freenlace. etc" + contadorIngresos;
 
-    const nuevoMontoIngreso = document.createElement("input")
-    nuevoMontoIngreso.type = "number";
-    nuevoMontoIngreso.id = "amount2" + contadorIngresos;
-    nuevoMontoIngreso.placeholder = "0.00" + contadorIngresos; 
+//     //monto de ingreso
 
-    //fecha de ingreso
+//     const nuevoMontoIngreso = document.createElement("input")
+//     nuevoMontoIngreso.type = "number";
+//     nuevoMontoIngreso.id = "amount" + contadorIngresos;
+//     nuevoMontoIngreso.placeholder = "0.00" + contadorIngresos; 
 
-    const fechaDeIngreso = document.createElement("input")
-    fechaDeIngreso.type = "date";
-    fechaDeIngreso.id = "date" + contadorIngresos;
+//     //fecha de ingreso
 
-    nuevoIngreso.appendChild(nuevaDescripcion);
-    nuevoIngreso.appendChild(nuevoMontoIngreso);
-    nuevoIngreso.appendChild(fechaDeIngreso);
+//     const fechaDeIngreso = document.createElement("input")
+//     fechaDeIngreso.type = "date";
+//     fechaDeIngreso.id = "date" + contadorIngresos;
 
-    document.getElementById("form").appendChild(nuevoIngreso);
-});
+//     nuevoIngreso.appendChild(nuevaDescripcion);
+//     nuevoIngreso.appendChild(nuevoMontoIngreso);
+//     nuevoIngreso.appendChild(fechaDeIngreso);
+
+//     document.getElementById("form").appendChild(nuevoIngreso);
+// });
