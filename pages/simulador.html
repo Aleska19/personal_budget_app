@@ -15,71 +15,109 @@
 </head>
 <body>
     <header class="header header_simulador">
-        <img class="logo" src="../asset/SmartBudgetApp_logo_dark-04.png" alt="">
+       <!-- <img class="logo" src="../asset/SmartBudgetApp_logo_dark-04.png" alt="">-->
+        <h1>SMARTBUDGET</h1>
     </header>
     <section class="about-us">
         <div class="flex_info">
             <img class="img img_principal" src="../asset/imagen_principal_simulador.jpg"  alt="">
             <p>En <span>SmartBudget</span>, simplificamos el proceso de gestionar tus gastos personales. Nuestra herramienta te permite ingresar y organizar tus gastos de manera rápida y eficiente, sin la necesidad de registrarte o almacenar información. Todo se realiza de forma directa y segura</p>
         </div>
-        <a id="btn_empieza_ahora" href="">Empieza ahora</a>
+        <!--<a id="btn_empieza_ahora" href="">Empieza ahora</a>-->
     </section>
 
-    <h1>Simulador de Gastos</h1>
+    <h1 class="simulador-title">Simulador de Gastos</h1>
 
+<!--Ingresos-->
     <section class="simulador">
-        <div id="form" class="form form-1">
+        <div id="form" class="form ingresos-grid">
             <form id="ingresosForm" action="">
                 <h2>Agregar Ingresos Mensuales</h2>
 
-                <div id="item">
+                <div id="item" class="item">
                     <label for="source" name="source">Fuente del Ingreso:</label>
                     <input type="text" id="source" name="source" placeholder="Salario, Freelance, etc." required> 
                 </div>
 
-                <div id="item">
+                <div id="item" class="item">
                     <label for="amount" name="amount">Monto de tu ingreso</label>
                     <input type="number" id="amount" name="amount" step="0.01" min="0" placeholder="0.00" required>
                 </div>
 
-                <div id="item">
+                <div id="item" class="item">
                     <label for="date" name="date">Fecha de Ingreso:</label>
                     <input type="date" id="date" name="date" required>
                 </div> 
-                <a id="agregar" href="#">Agregar</a>
-                <a id="agregarIngresos" href="#">Agregar otro Ingresos</a>
+
+                <div class="btn-add">
+                    <a id="agregar" href="#">Agregar</a>
+                </div>
+               <!--<a id="agregarIngresos" href="#">Agregar otro Ingresos</a>-->
             </form>
             <h2>Total Ingresos: <span id="totalIngresos">0</span></h2>
         </div>
 
-        <div class="form form-2">
+        <!--Gastos-->
+
+        <div class="form gastos-grid">
             <form id="myForm" action="">
                 <h2>Gastos Mensuales</h2>
-                <label for="description" name="description">Descripcion de gasto</label>
-                <input type="text" id="description" name="description" placeholder="Alquiler, Comida, Gasolina, etc." required> 
+                <div class="item">
+                    <label for="alquiler" name="alquiler">Alquiler</label>
+                    <input type="number" id="alquiler" name="alquiler" value="0" min="0" placeholder="00.0$" required> 
+                </div>
 
-                <label for="expenses" name="expenses">¿Cual fue tu gastos este mes?</label>
-                <input type="number" id="amount" name="amount" step="0.01" min="0" placeholder="0.00" required>
+                <div class="item">
+                    <label for="alquiler" name="alquiler">Alquiler</label>
+                    <input type="number" id="alquiler" name="alquiler" value="0" min="0" placeholder="00.0$" required> 
+                </div>
+
+                <div class="item">
+                    <label for="alquiler" name="alquiler">Alquiler</label>
+                    <input type="number" id="alquiler" name="alquiler" value="0" min="0" placeholder="00.0$" required> 
+                </div>
+
+                <div class="item">
+                    <label for="alquiler" name="alquiler">Alquiler</label>
+                    <input type="number" id="alquiler" name="alquiler" value="0" min="0" placeholder="00.0$" required> 
+                </div>
+
+                <div class="item">
+                    <label for="alquiler" name="alquiler">Alquiler</label>
+                    <input type="number" id="alquiler" name="alquiler" value="0" min="0" placeholder="00.0$" required> 
+                </div>
+
+                <div class="item">
+                    <label for="alquiler" name="alquiler">Alquiler</label>
+                    <input type="number" id="alquiler" name="alquiler" value="0" min="0" placeholder="00.0$" required> 
+                </div> 
+
+                <div class="item">
+                    <label for="alquiler" name="alquiler">Alquiler</label>
+                    <input type="number" id="alquiler" name="alquiler" value="0" min="0" placeholder="00.0$" required> 
+                </div>
 
                 <button id="agregarGastos" type="add">Agregar más</button>
                 
             </form>
             <h2>Total:</h2>
         </div>
+
+        <div class="resumen-grid">
+            <h2>Resumen</h2>
+            <div>
+                <h3>Ingresos Totales</h3>
+                <p></p>
+            </div>
+    
+            <div>
+                <h3>Gastos Totales</h3>
+                <p></p>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h2>Resumen</h2>
-        <div>
-            <h3>Ingresos Totales</h3>
-            <p></p>
-        </div>
 
-        <div>
-            <h3>Gastos Totales</h3>
-            <p></p>
-        </div>
-    </section>
 
 
 

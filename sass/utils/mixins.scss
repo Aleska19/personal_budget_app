@@ -4,3 +4,18 @@
     font-size: $parrafos;
     font-weight: 700;
 }
+
+@mixin formularios{
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+@mixin btn{
+    background: $quaternary_color;
+    padding: 0.5rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}

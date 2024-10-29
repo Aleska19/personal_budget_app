@@ -21,7 +21,8 @@ function ingresosMensuales(){
     }else{
         alert("Por favor, completa todos los campos antes de agregar")
     }
-       //Total ingreosos//
+    
+       //Total ingresos//
 
 totalIngresos += montoIngreso;
 
@@ -30,5 +31,5 @@ totalIngresosElement.textContent = totalIngresos.toFixed(2);
 }
 
 //Le agregamos funcionalidad al boton agregar 
-agregarBtn.addEventListener("click", ingresosMensuales)
+agregarBtn.addEventListener("click", ingresosMensuales);
 
