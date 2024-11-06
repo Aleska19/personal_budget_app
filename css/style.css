@@ -96,7 +96,7 @@
 }
 
 .header_simulador {
-  background: black;
+  background: #131323;
   -webkit-box-shadow: 0 0 5px 0;
           box-shadow: 0 0 5px 0;
   border-bottom: solid 1px #bdc3c7;
@@ -108,7 +108,7 @@
 }
 
 .about-us {
-  background-color: currentColor;
+  background-color: #131323;
   padding: 3rem;
 }
 
@@ -238,6 +238,22 @@
           box-shadow: 0px 0px 7px 1px gray;
   padding: 2rem;
   border-radius: 15px;
+}
+.simulador .gastos-grid .btn-gastos {
+  padding: 2rem 0 0 0;
+}
+.simulador .gastos-grid .btn-gastos a {
+  background: #F1C40F;
+  padding: 0.5rem;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  text-decoration: none;
 }
 .simulador .resumen-grid {
   -ms-grid-column: 2;

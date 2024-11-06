@@ -1,3 +1,4 @@
+
 // const ingreso = [];
 // const gastos = [];
 
@@ -58,9 +59,6 @@
 // }
 
 // saldoTotal()
-
-
-
 
 
 

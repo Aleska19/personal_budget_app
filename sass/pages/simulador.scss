@@ -1,6 +1,6 @@
 @import '../utils/mixins.scss';
 .header_simulador{
-    background: black;
+    background: #131323;
     box-shadow: 0 0 5px 0;
     border-bottom: solid 1px #bdc3c7;
     padding: 1rem;
@@ -11,7 +11,7 @@
 }
 
 .about-us{
-    background-color: currentColor;
+    background-color: #131323;
     padding: 3rem;
 }
 
@@ -72,6 +72,12 @@
         border: solid 1px gray;
         box-shadow: 0px 0px 7px 1px gray;
         @include formularios;
+      .btn-gastos{
+        padding: 2rem 0 0 0;
+        a{
+            @include btn;
+        }
+      }
     }
     .resumen-grid{
         grid-column: 2/4;

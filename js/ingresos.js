@@ -16,7 +16,7 @@ function ingresosMensuales(){
 
 //aqui agregamos una condicion al llenar el formulario 
     if(descripcionIngreso && montoIngreso && fechaIngreso){
-        ingresos.push({descripcio: descripcionIngreso, monto: montoIngreso, fecha: fechaIngreso});
+        ingresos.push({descripcion: descripcionIngreso, monto: montoIngreso, fecha: fechaIngreso});
         console.log('ingresos actuales', ingresos)
     }else{
         alert("Por favor, completa todos los campos antes de agregar")
@@ -27,7 +27,7 @@ function ingresosMensuales(){
 totalIngresos += montoIngreso;
 
 //mostrar el total de ingresos
-totalIngresosElement.textContent = totalIngresos.toFixed(2);
+totalIngresosElement.textContent = totalIngresos.toFixed(2) + "$";
 }
 
 //Le agregamos funcionalidad al boton agregar 
