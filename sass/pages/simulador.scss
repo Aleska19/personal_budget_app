@@ -11,7 +11,7 @@
 }
 
 .about-us{
-    background-color: #131323;
+    background: #ffffff;
     padding: 3rem;
 }
 
@@ -20,7 +20,7 @@
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-    color: white;
+    color: $primary_color;
     .img_principal{
         max-width: 90vw;
         height: 50vh;
@@ -82,7 +82,7 @@
     .resumen-grid{
         grid-column: 2/4;
         grid-row: 1/3;
-        background: $secondary_color;
+        background-image: linear-gradient(to top, #ffffff, #dde3f3, #afcbe6, #74b6d4, #17a2b8);
         height: 80%;
         @include formularios;
     }

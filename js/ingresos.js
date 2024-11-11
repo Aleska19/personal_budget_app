@@ -3,9 +3,9 @@ const totalIngresosElement = document.getElementById('totalIngresos')
 
 let totalIngresos = 0;
 
-function capturarIngresos(event){
-    event.preventDefault();
-}
+// function capturarIngresos(event){
+//     event.preventDefault();
+// }
 
 const ingresos = []
 
@@ -30,6 +30,20 @@ totalIngresos += montoIngreso;
 totalIngresosElement.textContent = totalIngresos.toFixed(2) + "$";
 }
 
-//Le agregamos funcionalidad al boton agregar 
-agregarBtn.addEventListener("click", ingresosMensuales);
+function actualizarResumenIngreso(){
+    const resumenIngreso = document.getElementById('resumenIngreso');
+    resumenIngreso.textContent = totalIngresos.toFixed(2) + "$";
+}
 
+agregarBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    ingresosMensuales();
+    actualizarResumenIngreso()
+})
+
+//Le agregamos funcionalidad al boton agregar 
+
+
+//Resumen Ingresos
+// const resumenIngresos = document.getElementById('resumenIngreso');
+// resumenIngresos.push(montoIngreso);

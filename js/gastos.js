@@ -1,3 +1,4 @@
+
 const ctx = document.getElementById("myChart").getContext('2d');
 
 const gastosChart = new Chart (ctx, {
@@ -13,7 +14,7 @@ const gastosChart = new Chart (ctx, {
                 'black',
             ],
             borderColor: [
-                '#00000'
+                'black',
             ],
             bordeWidth: 2
         }]
@@ -40,13 +41,14 @@ const gastosChart = new Chart (ctx, {
 //variables simulador
 const btnAgregar= document.getElementById('agregarGastos');
 const totalGastosElement= document.getElementById('totalGastos');
+let total = 0;
 
 //Array para almacenar los gastos
 const gastos = [];
 
 //Funcion para calcular los gastos y actualizar grafico de chart.ja
 function calcularTotalGastos(){
-    let total = 0;
+    // let total = 0;
 
 //Obtener el valor del input y label
     const montoGastos = document.querySelectorAll('#montoGastos');
@@ -63,6 +65,7 @@ function calcularTotalGastos(){
 
 //Sumar el total de gastos
         total += monto;
+        
 
 //agregar los datos a mi array vacio 
         gastos.push(monto);
@@ -81,11 +84,32 @@ function calcularTotalGastos(){
     gastosChart.update();
 }
 
+//funcion para el resumen total de gastos
+
+function actualizarResumen(){
+    const resumenGastos = document.getElementById('resumenGastos');   
+    resumenGastos.textContent = total.toFixed(2) + "$"
+}
+
 //Evento para añadir un gasto al presionar el boton 
 btnAgregar.addEventListener("click", function(event){
 event.preventDefault();
 calcularTotalGastos();
-})
+actualizarResumen();
+});
+
+
+
+//resumen gastos//
+// function resumenGastos(monto){
+//     gastos += parseFloat(monto);
+//     actualizarResumen();
+// }
+
+// function actualizarResumen(){
+//     const resumenGastos = document.getElementById('resumenGastos');
+//     resumenGastos.textContent = `Gastos Totales: $${total.toFixed(2)}`;
+// }
 
 
 
