@@ -53,7 +53,7 @@ const gastosChart = new Chart (ctx, {
             data: [],
             backgroundColor: [
                 '#FFFFFF',
-                'pink',
+                '#F1C40F',
                 'black',
             ],
             borderColor: [

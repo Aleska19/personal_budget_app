@@ -96,7 +96,7 @@
 }
 
 .header_simulador {
-  background: #131323;
+  background: #040c14;
   -webkit-box-shadow: 0 0 5px 0;
           box-shadow: 0 0 5px 0;
   border-bottom: solid 1px #bdc3c7;
@@ -106,9 +106,14 @@
   color: white;
   font-family: poppins;
 }
+.header_simulador h1 span {
+  color: #17A2B8;
+}
 
 .about-us {
-  background: #ffffff;
+  background: url(/asset/background-info-nube2.svg) no-repeat;
+  background-size: cover;
+  min-height: 80vh;
   padding: 3rem;
 }
 
@@ -125,7 +130,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: black;
+  color: white;
 }
 .flex_info .img_principal {
   max-width: 90vw;
@@ -138,12 +143,13 @@
   font-family: lato;
   font-size: 1.2rem;
   font-weight: 700;
+  font-weight: 300 !important;
 }
 
 .simulador-title {
   text-align: center;
   font-family: montserrat;
-  padding: 3rem;
+  padding: 0 3rem 3rem 3rem;
 }
 
 .simulador {
