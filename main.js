@@ -1,5 +1,5 @@
 //DolarApi
-const API_URL = ""
+// const API_URL = ""
 
 
 
@@ -10,7 +10,27 @@ const agregarBtn = document.getElementById('agregar');
 const totalIngresosElement = document.getElementById('totalIngresos')
 
 let totalIngresos = 0;
-const ingresos = []
+let ingresos = [];
+
+
+//funcion para guardar en el local storage// 
+function guardarDatosEnStorage(){
+    console.log('Guardando datos', ingresos);
+    localStorage.setItem('ingresos', JSON.stringify(ingresos));
+}
+
+
+//funcion para cargar localstorage//
+function obtenerDatosStorage(){
+    const datosGuardados = localStorage.getItem('ingresos');
+    if (datosGuardados){
+        ingresos = JSON.parse(datosGuardados) || [];
+
+        //calcular ingresos al cargar//
+        totalIngresos = ingresos.reduce((total, ingreso) => total + ingreso.monto, 0);
+        actualizarResumenIngreso();
+    }
+}
 
 function ingresosMensuales(){
     const descripcionIngreso = document.getElementById('source').value;
@@ -20,29 +40,38 @@ function ingresosMensuales(){
 //aqui agregamos una condicion al llenar el formulario 
     if(descripcionIngreso && montoIngreso && fechaIngreso){
         ingresos.push({descripcion: descripcionIngreso, monto: montoIngreso, fecha: fechaIngreso});
-        console.log('ingresos actuales', ingresos)
+        console.log('ingresos actuales', ingresos);
+
+        guardarDatosEnStorage();
+        //Total ingresos//
+        totalIngresos += montoIngreso;
+        actualizarResumenIngreso();
+
     }else{
         alert("Por favor, completa todos los campos antes de agregar")
     }
-    
-       //Total ingresos//
-
-totalIngresos += montoIngreso;
-
 //mostrar el total de ingresos
-totalIngresosElement.textContent = totalIngresos.toFixed(2) + "$";
+// totalIngresosElement.textContent = totalIngresos.toFixed(2) + "$";
 }
+
 
 function actualizarResumenIngreso(){
     const resumenIngreso = document.getElementById('resumenIngreso');
+    totalIngresosElement.textContent = totalIngresos.toFixed(2) + "$";
     resumenIngreso.textContent = totalIngresos.toFixed(2) + "$";
+
 }
+
+
+
 
 agregarBtn.addEventListener("click", function(event){
     event.preventDefault();
     ingresosMensuales();
-    actualizarResumenIngreso()
-})
+    obtenerDatosStorage();
+});
+
+
 
 
 //GASTOS Y GRAFICO
