@@ -5,6 +5,7 @@ import { obtenerDatosEnStorage, guardarDatosEnStorage } from './storage.js';
 
 let totalGastos = 0;
 // const gastos = obtenerDatosEnStorage('gastos')
+const gastos = obtenerDatosEnStorage('gastos');
 
 export function calcularTotalGastos() {
     totalGastos = 0;
@@ -14,11 +15,11 @@ export function calcularTotalGastos() {
     const labelGastos = document.querySelectorAll('#descripcionGasto');
 
 
-
+// label y data para el grafico
     const labels = [];
     const data = [];
 
-    const gastos = obtenerDatosEnStorage('gastos');
+    // const gastos = obtenerDatosEnStorage('gasto s');
 
     montoGastos.forEach((gasto, index) => {
         const monto = parseFloat(gasto.value) || 0;
@@ -33,6 +34,7 @@ export function calcularTotalGastos() {
         const nuevoGasto = {
             descripcion: label,
             monto: monto,
+            total_gasto : saldoNeto,
             fecha: new Date().toISOString().split('T')[0]
         };
 
